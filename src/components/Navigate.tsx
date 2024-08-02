@@ -16,7 +16,7 @@ const Navigate: React.FC<FormProps> = ({ props }) => {
           className="nav-toggle"
           onClick={() => setToggle((toggle) => !toggle)}
         >
-          {toggle ? "X" : "+"}
+          {toggle ? "X" : "="}
         </button>
         {toggle && (
           <ul>

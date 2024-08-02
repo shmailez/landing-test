@@ -59,8 +59,11 @@ header::before {
   right: 10px;
   top: 10px;
   display: none;
-  background-color: #27c2fa;
+  background: none;
+  border: none;
   z-index: 3;
+  color: aliceblue;
+  font-size: 32px;
 }
 
 .navigate {
@@ -216,6 +219,11 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  .Header {
+    margin: 100px 0;
+  }
+
   .nav-gorizontal {
     visibility: hidden;
     background-color: #27c2fa;
@@ -303,12 +311,25 @@ body {
 }
 
 @media (max-width: 512px) {
+  .Header {
+    margin: 50px;
+  }
   .hi-work {
     grid-template-columns: 1fr;
+    margin: 200px 0 0 0;
+  }
+
+  .tb {
+    margin:  0;
   }
 }
 
 @media (max-width: 375px) {
+
+  .Header {
+    margin: 46px 0px;
+  }
+
   .form {
     grid-template-columns: 1fr;
   }

@@ -5,7 +5,7 @@ const HowItsWork = () => {
     <>
       <div className="hi-work">
         <h2 id="hiw" className="title">
-          How its wors
+          Как это работает?
         </h2>
         <div className="hi-work_item">
           <img src={secure} alt="secure" />
