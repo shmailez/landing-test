@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import logo from "../assets/logo.svg";
+import logoblack from "../assets/logoBlack.svg";
 
 type FormProps = {
   props: React.RefObject<HTMLElement>;
@@ -18,10 +19,13 @@ const Navigate: React.FC<FormProps> = ({ props }) => {
           className="nav-toggle"
           onClick={() => setToggle((toggle) => !toggle)}
         >
-          {toggle ? "X" : "="}
+          {toggle ? <span>X</span> : "="}
         </button>
         {toggle && (
           <ul>
+            <li onClick={() => setToggle((toggle) => !toggle)}>
+              <img className="logo logo-black" src={logoblack} alt="logo" />
+            </li>
             {/* <li>
             <Router>
               <NavLink to="/">click</NavLink>

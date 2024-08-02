@@ -251,6 +251,10 @@ body {
     margin: 100px 0;
   }
 
+  .logo-black {
+    color: #000;
+  }
+
   .nav-gorizontal {
     visibility: hidden;
     background-color: #27c2fa;
@@ -270,20 +274,23 @@ body {
     display: flex;
     flex-direction: column;
     list-style: none;
-    background-color: #c7c7c7;
+    background-color: #fcfbfb;
     height: 100vh;
     width: 100%;
   }
   
   .navigate ul li{
-    margin: 20px;
+    margin: 32px 20px;
   }
   
   .navigate ul li a {
     text-decoration: none;
+    color: #000;
   }
   
-
+  .navigate button span {
+    color: #000;
+  }
 
 
   .hi-work {
@@ -371,6 +378,10 @@ body {
 
   .form {
     grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
   }
+
+  
 }
 
