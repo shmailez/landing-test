@@ -39,19 +39,35 @@ const Form: React.FC<FormProps> = ({ props }) => {
         Отрправь форму
       </h3>
       <form className="form">
-        <input value={name} onChange={(e) => setName(e.target.value)} />
+        <input
+          placeholder="Имя"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
         <input
           value={phoneNumber}
+          placeholder="Телефон"
           onChange={(e) => setPhoneNumber(e.target.value)}
         />
 
-        <input
-          type="checkbox"
-          checked={consent}
-          onChange={() => consentClick()}
-        />
+        <div>
+          <input
+            className="form-checkbox"
+            type="checkbox"
+            name="checkbox"
+            checked={consent}
+            onChange={() => consentClick()}
+          />
 
-        <input type="button" value="add" onClick={handleAction} />
+          <label htmlFor="checkbox">Согласен, отказываюсь</label>
+        </div>
+
+        <input
+          className="form-button"
+          type="button"
+          value="Отправить"
+          onClick={handleAction}
+        />
       </form>
     </>
   );

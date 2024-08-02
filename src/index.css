@@ -211,13 +211,43 @@ header::before {
   margin: 0 auto;
 }
 
+.form div{
+  display: flex;
+  align-items: center;
+}
+
 .form-title {
   text-align: center;
+  margin: 64px 0;
+  font-size: 32px;
+}
+
+.form input {
+  padding: 20px 0;
+  border-radius: 4px;
+  /* font-size: 24px; */
+}
+
+.form-button {
+  background-color: #2A6CEA;
+  color: #ECEFF2;
+  font-size: 24px;
+}
+
+.form-checkbox {
+  background-color: #2A6CEA;
+  color: #ECEFF2;
+  font-size: 24px;
+  margin: 12px;
 }
 
 footer {
   text-align: center;
   /* width: 100%; */
+}
+
+footer p {
+  margin: 32px;
 }
 
 body {
