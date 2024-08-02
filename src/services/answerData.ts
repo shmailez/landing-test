@@ -1,6 +1,5 @@
 export default async function getAnswers ()  {
     
-
     const responce = await fetch(`https://a912654b4478639c.mokky.dev/answers`)
     
         if(!responce.ok) {
@@ -8,4 +7,4 @@ export default async function getAnswers ()  {
         }
     
         return await responce.json()
-    }
+}

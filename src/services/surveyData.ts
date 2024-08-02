@@ -1,7 +1,6 @@
 
 export default async function getSurvey ()  {
     
-
     const responce = await fetch(`https://a912654b4478639c.mokky.dev/survey`)
     
         if(!responce.ok) {
@@ -9,7 +8,7 @@ export default async function getSurvey ()  {
         }
     
         return await responce.json()
-    }
+}
 
      {/* <div className="survey-item">
           <h2>Опрошенных пользовались микрокредитами</h2>
