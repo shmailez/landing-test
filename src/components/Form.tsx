@@ -7,8 +7,7 @@ type FormProps = {
 };
 
 const Form: React.FC<FormProps> = ({ props }) => {
-  console.log("ref", props);
-
+  console.log(props);
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [consent, setConsent] = useState(false);

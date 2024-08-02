@@ -18,6 +18,10 @@
   padding: 0;
 }
 
+/* body{
+  width: 1500px;
+} */
+
 header {
   display: flex;
   position: relative;
@@ -25,6 +29,10 @@ header {
   /* align-items: center; */
   background-image: url(./assets/Lunc.png);
   background-position: center;
+  /* min-width: 1300px;
+  width: 100%; */
+  width: calc(100vw - 17px)
+  /* max-width: 100%; */
 }
 
 header::before {
@@ -43,7 +51,7 @@ header::before {
   justify-content: center;
   align-items: center;
   margin: 200px auto;
-  color: #27c2fa;
+  color: #ecfaff;
   z-index: 1;
 }
 
@@ -53,6 +61,13 @@ header::before {
   align-items: center;
   background-image: url(./assets/Lunc.png);
 } */
+
+.logo {
+  /* background-color: #2A6CEA; */
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
 
 .nav-toggle {
   position: absolute;
@@ -67,6 +82,8 @@ header::before {
 }
 
 .navigate {
+  max-width: 1000px;
+  margin: 0 auto;
   position: relative;
   /* position: absolute;
   top: 0;
@@ -102,11 +119,13 @@ header::before {
 }
 
 .hi-work {
+  max-width: 1000px;
+  margin: 200px auto 0 auto;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
-  margin: 200px 40px 20px 40px;
+  /* margin: 200px 40px 20px 40px; */
 }
 
 .hi-work h2{
@@ -120,7 +139,9 @@ header::before {
   display: grid;
   grid-template-columns: 50% 1fr;
   gap: 20px;
-  margin: 0 40px;
+  /* margin: 0 40px; */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .tb-text{
   display: flex;
@@ -137,7 +158,9 @@ header::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 40px;
+  /* margin: 0 40px; */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .accordeon-item {
@@ -186,7 +209,11 @@ header::before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin: 0 40px;
+  /* margin: 0 40px; */
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  max-width: 1000px;
+  
 }
 
 .form {
@@ -203,6 +230,7 @@ header::before {
 
 footer {
   text-align: center;
+  /* width: 100%; */
 }
 
 body {
@@ -213,6 +241,14 @@ body {
 }
 
 @media (max-width: 1008px) {
+
+  .logo {
+    /* background-color: #2A6CEA; */
+    position: absolute;
+    left: 10px;
+    top: 20px;
+  }
+
   .Header {
     margin: 200px;
   }
@@ -312,7 +348,7 @@ body {
 
 @media (max-width: 512px) {
   .Header {
-    margin: 50px;
+    margin: 50px 100px;
   }
   .hi-work {
     grid-template-columns: 1fr;
@@ -321,6 +357,18 @@ body {
 
   .tb {
     margin:  0;
+  }
+
+  .tb-text {
+    max-width: 400px;
+  }
+
+  .answers{
+    margin: 0;
+  }
+
+  .form {
+    margin: 0;
   }
 }
 

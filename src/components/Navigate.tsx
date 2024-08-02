@@ -1,6 +1,7 @@
 // import { NavLink, Router } from "react-router-dom";
 
 import { useState } from "react";
+import logo from "../assets/logo.svg";
 
 type FormProps = {
   props: React.RefObject<HTMLElement>;
@@ -12,6 +13,7 @@ const Navigate: React.FC<FormProps> = ({ props }) => {
   return (
     <>
       <nav className="navigate">
+        <img className="logo" src={logo} alt="logo" />
         <button
           className="nav-toggle"
           onClick={() => setToggle((toggle) => !toggle)}
