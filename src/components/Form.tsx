@@ -51,15 +51,16 @@ const Form: React.FC<FormProps> = ({ props }) => {
         />
 
         <div>
-          <input
-            className="form-checkbox"
-            type="checkbox"
-            name="checkbox"
-            checked={consent}
-            onChange={() => consentClick()}
-          />
-
-          <label htmlFor="checkbox">Согласен, отказываюсь</label>
+          <label htmlFor="checkbox">
+            <input
+              className="form-checkbox"
+              type="checkbox"
+              name="checkbox"
+              checked={consent}
+              onChange={() => consentClick()}
+            />
+            Согласен, отказываюсь
+          </label>
         </div>
 
         <input
