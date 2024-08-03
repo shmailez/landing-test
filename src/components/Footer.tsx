@@ -1,10 +1,8 @@
 const Footer: React.FC = () => {
   return (
-    <>
-      <footer>
-        <p>© 2021 Лаборатория интернет</p>
-      </footer>
-    </>
+    <footer>
+      <p>© 2021 Лаборатория интернет</p>
+    </footer>
   );
 };
 

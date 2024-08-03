@@ -1,31 +1,23 @@
-import { useEffect, useState } from "react";
-import getAnswers from "../services/answerData";
 import Accordeon from "./AccordeonItems";
+import { useAppSelector } from "../hooks/hooks";
 
 interface AnswerItem {
-  id: number;
+  id: string;
   title: string;
   content: string;
 }
 
 const Answers: React.FC = () => {
-  const [data, setData] = useState<AnswerItem[]>([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const fetchedData = await getAnswers();
-      setData(fetchedData);
-    }
-
-    fetchData();
-  }, []);
+  const answerList = useAppSelector<AnswerItem[]>(
+    (state) => state.answeritems.answeritems
+  );
 
   return (
     <>
       <div id="answers" className="answers">
         <h3>Вопросы и ответы</h3>
 
-        {data.map((item) => (
+        {answerList.map((item) => (
           <Accordeon key={item.id} props={item} />
         ))}
       </div>

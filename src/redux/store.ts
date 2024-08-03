@@ -1,9 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import  usersReducer  from "./userSlice";
+import hiwReducer from "./hiwSlice"
+import SurveyReducer from "./surveySlice"
+import AnswersReducer from "./answerSlice";
 
 const store = configureStore({
     reducer: {
-        users: usersReducer
+        users: usersReducer,
+        hiwites: hiwReducer,
+        surveyitems: SurveyReducer,
+        answeritems: AnswersReducer
     }
 })
 

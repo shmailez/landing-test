@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
-import getSurvey from "../services/surveyData";
+import { useAppSelector } from "../hooks/hooks";
 
 interface SurveyItem {
-  id: number;
+  id: string;
   title: string;
   content: string;
 }
 
 const Survey = () => {
-  const [data, setData] = useState<SurveyItem[]>([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      const fetchedData = await getSurvey();
-      setData(fetchedData);
-    }
-
-    fetchData();
-  }, []);
+  const surveyList = useAppSelector<SurveyItem[]>(
+    (state) => state.surveyitems.surveyitems
+  );
 
   return (
     <>
       <div className="survey-block">
-        {data.map((item) => (
+        {surveyList.map((item) => (
           <div key={item.id} className="survey-item">
             <h2>{item.title}</h2>
             <p>{item.content}</p>
