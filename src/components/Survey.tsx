@@ -13,13 +13,15 @@ const Survey = () => {
 
   return (
     <>
-      <div className="survey-block">
-        {surveyList.map((item) => (
-          <div key={item.id} className="survey-item">
-            <h2>{item.title}</h2>
-            <p>{item.content}</p>
-          </div>
-        ))}
+      <div className="wrapper">
+        <div className="survey-block">
+          {surveyList.map((item) => (
+            <div key={item.id} className="survey-item">
+              <h2>{item.title}</h2>
+              <p>{item.content}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
