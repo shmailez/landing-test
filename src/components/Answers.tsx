@@ -15,7 +15,7 @@ const Answers: React.FC = () => {
   return (
     <>
       <div id="answers" className="answers">
-        <h3>Вопросы и ответы</h3>
+        <h3 className="title">Вопросы и ответы</h3>
 
         {answerList.map((item) => (
           <Accordeon key={item.id} props={item} />
