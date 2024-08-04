@@ -15,11 +15,14 @@
 }
 
 header {
+  padding: 0;
+  margin: 0;
   display: flex;
   position: relative;
   background-image: url(./assets/Lunc.png);
   background-position: center;
   width: calc(100vw - 17px)
+  
 }
 
 header::before {
@@ -120,9 +123,7 @@ header::before {
   display: grid;
   grid-template-columns: 50% 1fr;
   gap: 20px;
-  /* margin: 0 40px; */
   max-width: 1000px;
-  /* margin: 0 auto; */
   margin: 80px auto 0 auto;
 }
 .tb-text{
@@ -140,7 +141,6 @@ header::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin: 0 40px; */
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -159,11 +159,8 @@ header::before {
 .accordeon-item div{
   display: flex;
   justify-content: space-between;
-  /* position: relative; */
   border-top: 2px solid #c7c7c7;
   padding: 20px 0;
-  /* text-align: center; */
-
 }
 
 .accordeon-item button{
@@ -175,27 +172,10 @@ header::before {
   height: 32px;
   font-size: large;
   margin-right: 10px;
-  /* position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translate(-50%, -50%); */
   border-radius: 50%;
   background-color: inherit;
   cursor: pointer;
-  /* margin: auto 0; */
-  /* padding: 20px 0; */
-
 }
-
-/* .accordeon-item button span{
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 32px;
-  transform: translate(-50% -50%);
-  background-color: rgb(42, 182, 0);
-  border-radius: 50%
-} */
 
 .wrapper {
   background-color: #F6F8FA;
@@ -232,7 +212,6 @@ header::before {
 .form input {
   padding: 20px 0;
   border-radius: 4px;
-  /* font-size: 24px; */
 }
 
 .form-button {
@@ -250,7 +229,6 @@ header::before {
 
 footer {
   text-align: center;
-  /* width: 100%; */
 }
 
 footer p {
@@ -267,7 +245,6 @@ body {
 @media (max-width: 1008px) {
 
   .logo {
-    /* background-color: #2A6CEA; */
     position: absolute;
     left: 10px;
     top: 20px;
@@ -315,7 +292,6 @@ body {
   }
 
   .navigate {
-    /* background-color: rgb(166, 209, 194); */
     display: flex;
     justify-content: start;
   }
@@ -396,6 +372,9 @@ body {
 }
 
 @media (max-width: 512px) {
+  header {
+    width: 100%
+  }
   .Header {
     margin: 50px 100px;
   }
